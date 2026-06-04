@@ -1,4 +1,4 @@
-# HybridRAG
+# Hybrid RAG with pgvector + Cohere Rerank-3.5
 
 > **A retrieval-augmented Q&A system over technical documentation. Combines pgvector semantic search, Postgres full-text search, and a Cohere cross-encoder reranker, then answers with citation-grounded GPT-4o-mini.**
 
