@@ -1,0 +1,11 @@
+langchain-text-splitters>=0.3.0
+tiktoken>=0.8.0
+openai>=1.50
+python-dotenv>=1.0
+psycopg[binary]>=3.2
+pgvector>=0.3
+fastapi>=0.115
+uvicorn[standard]>=0.32
+cohere>=5.13
+langfuse>=4.0
+streamlit>=1.40

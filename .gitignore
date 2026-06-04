@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.venv/
+
+# Secrets — never commit
+.env
+.env.local
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+
+# Project data — fetched on demand, don't bloat the repo
+data/corpus/
+
+# Logs
+*.log
