@@ -2,12 +2,12 @@
 
 > **A retrieval-augmented Q&A system over technical documentation. Combines pgvector semantic search, Postgres full-text search, and a Cohere cross-encoder reranker, then answers with citation-grounded GPT-4o-mini.**
 
-Built with hybrid retrieval (dense + sparse fused via Reciprocal Rank Fusion), an optional rerank stage that suppresses cross-source keyword collisions, inline citation grounding traceable back to source chunks, and end-to-end LLM observability via Langfuse.
+Built with hybrid retrieval (dense + sparse fused via **Reciprocal Rank Fusion (RRF)**), an optional rerank stage reorders retrieved documents using a more accurate relevance model so the most contextually useful chunks are sent to the LLM, inline citation grounding traceable back to source chunks, and end-to-end LLM observability via Langfuse.
 
 
 ## What it does
 
-LLMs are great at synthesizing answers but miss specifics in fast-moving SDK docs — they invent APIs that don't exist or describe last year's behavior. HybridRAG indexes a corpus of technical docs and answers natural-language questions with inline `[chunk_<id>]` citations back to the exact source.
+This is a learning-focused implementation that combines semantic retrieval (dense) and keyword-based searc (sparse) to improve grounding over technical documentation, enabling natural-language question answering with inline chunk-level citations back to the original source content.
 
 Four retrieval modes are exposed so you can see what each technique contributes to the final ranking.
 
@@ -92,8 +92,7 @@ Four retrieval modes are exposed so you can see what each technique contributes 
 score(c) = Σ  1 / (k + rank_i(c))      with k = 60
 ```
 
-A constant `k=60` flattens the contribution of any single very-high rank, so the fusion stays stable even when one signal disagrees sharply.
-
+A smoothing constant `k=60` keeps the fused ranking balanced by reducing the impact of any single top-ranked result.
 
 ## Tech stack
 
@@ -143,19 +142,19 @@ A constant `k=60` flattens the contribution of any single very-high rank, so the
 
 ### Hybrid retrieval, not just vectors
 
-Pure vector search misses queries that hinge on specific API names — embeddings smooth over the exact tokens you care about. Pure keyword search misses paraphrases. RRF fusion takes the top-50 from each, sums `1 / (60 + rank)` across both rankings, and returns whichever chunks accumulate the most score — no learned weights, no tuning.
+The system combines dense vector search with sparse keyword search to improve retrieval quality across technical documentation. Semantic retrieval captures conceptual similarity, while keyword search preserves exact API and identifier matches. Results from both retrieval methods are fused using Reciprocal Rank Fusion (RRF) before being passed downstream.
 
 ### Cohere rerank-3.5 as the final filter
 
-RRF's failure mode is that a strong sparse hit in the *wrong source* can pollute the fused top — e.g., a "What is a Pydantic BaseModel?" query where FastAPI's body tutorial mentions "BaseModel" and outranks the canonical Pydantic doc. Cohere's `rerank-v3.5` is a cross-encoder: it reads the query and each candidate's full text together and produces a relevance score that catches semantic mismatches RRF's bag-of-rankings approach can't. Used as a final pass over the top-20 hybrid candidates to produce the final top-5.
+A final reranking step using `Cohere rerank-v3.5` improves relevance by evaluating the query against candidate chunks directly. This helps prioritize the most contextually accurate documentation before generating the final response.
 
 ### Citation grounding
 
-The system prompt requires every factual claim be tagged with `[chunk_<id>]`. After generation, those markers are regex-extracted and resolved back to chunk metadata, so the API response includes a `sources` list of only the chunks the answer actually used — not just everything retrieved.
+Generated responses include inline chunk-level citations `[chunk_<id>]` linked back to the original source documents. Referenced chunks are extracted post-generation and returned alongside the answer for transparent grounding and traceability.
 
 ### Observability via Langfuse
 
-Every `/ask` request is one Langfuse trace. The `@observe()` decorator wraps the endpoint and each retriever as named spans; the `langfuse.openai` drop-in client auto-logs every embedding and chat-completion call with token counts, cost, and latency. Result: a tree showing exactly which step was slow or which chunks were fed to the LLM, viewable at cloud.langfuse.com. Disabled cleanly if keys aren't set.
+Langfuse tracing is integrated across retrieval and generation workflows to monitor latency, token usage, costs, and retrieved context. This provides end-to-end visibility into the RAG pipeline for debugging and evaluation.
 
 ### Models via GitHub Models
 
@@ -172,5 +171,3 @@ All indexed docs come from public OSS documentation:
 - `langchain/` — LangChain monorepo READMEs (`langchain-ai/langchain`)
 - `langgraph/` — LangGraph monorepo READMEs (`langchain-ai/langgraph`)
 - `anthropic/` — Anthropic cookbook (`anthropics/anthropic-cookbook`)
-
-Markdown only, scraped once via `git clone` + filename flattening (`docs/tutorial/cors.md` → `tutorial__cors.md`). Not committed to the repo (gitignored) — re-fetched on demand.
