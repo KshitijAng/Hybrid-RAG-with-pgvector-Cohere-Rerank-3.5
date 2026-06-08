@@ -188,8 +188,3 @@ All indexed docs come from public OSS documentation:
 - `langchain/` — LangChain monorepo READMEs (`langchain-ai/langchain`)
 - `langgraph/` — LangGraph monorepo READMEs (`langchain-ai/langgraph`)
 - `anthropic/` — Anthropic cookbook (`anthropics/anthropic-cookbook`)
-
-
-## License
-
-MIT — see [LICENSE](LICENSE) for the full text.
