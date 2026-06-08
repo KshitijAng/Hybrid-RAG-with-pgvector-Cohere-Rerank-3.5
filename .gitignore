@@ -22,8 +22,5 @@ Thumbs.db
 # Project data — fetched on demand, don't bloat the repo
 data/corpus/
 
-# Eval — embedding cache is runtime-only (regenerated on first run)
-eval/query_embeddings.json
-
 # Logs
 *.log
