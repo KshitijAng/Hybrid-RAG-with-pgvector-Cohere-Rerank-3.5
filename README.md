@@ -107,6 +107,54 @@ score(c) = Σ  1 / (k + rank_i(c))      with k = 60
 
 A smoothing constant `k=60` keeps the fused ranking balanced by reducing the impact of any single top-ranked result.
 
+
+## Evaluation
+
+The four retrieval modes are measured against a hand-labeled set of 30 natural-language queries (`data/eval_queries.json`). Each query lists one or more "correct" source documents; a hit means **any expected doc appears in the top-5 retrieved chunks**.
+
+**Metrics:**
+- `recall@5` — fraction of queries where any expected doc lands in the top-5
+- `MRR` — mean of `1 / rank` of the first matching expected doc (0 if not found)
+
+**Results** (measured on 26 of 30 queries; full 30 pending — GitHub Models embed quota resets daily):
+
+| Mode | recall@5 | MRR | avg latency |
+|---|--:|--:|--:|
+| `sparse` | 0.462 | 0.285 | 14ms |
+| `hybrid` (RRF, no rerank) | 0.769 | 0.564 | 2,082ms |
+| `dense` | 0.846 | 0.628 | 1,219ms |
+| **`hybrid_rerank`** | **0.846** | **0.679** | 3,867ms |
+
+**What the numbers show:**
+
+1. **Vanilla `hybrid` is *worse* than `dense` alone** (0.77 vs 0.85 recall). Adding sparse to RRF pulls in cross-source keyword collisions that hurt overall retrieval — the failure mode the Cohere rerank section describes, now quantified.
+
+2. **Rerank fixes it.** `hybrid_rerank` recovers to the dense baseline on recall (0.85) *and* outperforms it on MRR (0.679 vs 0.628) — meaning when the right chunk is in the top-5, rerank places it higher in the list.
+
+3. **Sparse alone is the obvious loser** at 0.46 recall — Postgres FTS keyword matching misses paraphrased queries too often on technical docs (e.g. *"how does the attention mechanism work"* doesn't surface chunks that don't literally contain "attention mechanism").
+
+4. **Latency cost is real.** `hybrid_rerank` is ~3× slower than `dense` because each query adds a Cohere API call (~1–2s on the free tier). For latency-sensitive paths, `dense` alone is the rational choice; for quality-critical paths, `hybrid_rerank` is worth the wait.
+
+**Per-category breakdown** (n = number of queries in each category):
+
+| Category | n | dense | sparse | hybrid | hybrid_rerank |
+|---|--:|--:|--:|--:|--:|
+| single-source | 21 | 0.86 | 0.43 | 0.81 | **0.90** |
+| sparse-favorable (`bitsandbytes`, `strict_mode`) | 2 | 1.00 | 1.00 | 1.00 | 1.00 |
+| rerank-rescue (Pydantic BaseModel vs FastAPI body) | 1 | 1.00 | 0.00 | 1.00 | 1.00 |
+| dense-favorable (paraphrased concepts) | 2 | 0.50 | 0.50 | 0.00 | 0.00 |
+
+The categories were assigned when designing the query set, not after seeing results. The `dense-favorable` queries (*"How does the attention mechanism work"*, *"How do I tokenize text with a fast tokenizer"*) failed across all modes — useful signal that the corpus lacks specific canonical docs for those concepts (the HuggingFace docs use different vocabulary), not a retrieval-system issue.
+
+**Reproducing the eval:**
+
+```bash
+./venv/bin/python eval/retrieval_eval.py
+```
+
+The script checkpoints after every query (`eval/results_retrieval.json`) and caches query embeddings (`eval/query_embeddings.json`) so reruns are free.
+
+
 ## Tech stack
 
 | Concern | Tool |

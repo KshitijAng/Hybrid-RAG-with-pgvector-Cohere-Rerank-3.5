@@ -1,0 +1,1198 @@
+{
+  "How do I add CORS middleware in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__cors.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/tutorial__cors.md",
+          "fastapi/tutorial__cors.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/reference__middleware.md",
+          "fastapi/tutorial__middleware.md"
+        ],
+        "latency_ms": 896
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/release-notes.md",
+          "fastapi/tutorial__middleware.md",
+          "fastapi/tutorial__cors.md"
+        ],
+        "latency_ms": 10
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__cors.md",
+          "fastapi/tutorial__middleware.md",
+          "fastapi/release-notes.md",
+          "fastapi/tutorial__cors.md",
+          "fastapi/advanced__middleware.md"
+        ],
+        "latency_ms": 584
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/tutorial__cors.md",
+          "fastapi/reference__middleware.md",
+          "fastapi/tutorial__cors.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/tutorial__middleware.md"
+        ],
+        "latency_ms": 6086
+      }
+    }
+  },
+  "How do I handle path parameters in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__path-params.md",
+      "fastapi/tutorial__path-params-numeric-validations.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/tutorial__query-params.md",
+          "fastapi/tutorial__path-params.md",
+          "fastapi/advanced__behind-a-proxy.md",
+          "fastapi/tutorial__body.md",
+          "fastapi/tutorial__body-multiple-params.md"
+        ],
+        "latency_ms": 562
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/release-notes.md",
+          "fastapi/tutorial__body-multiple-params.md",
+          "fastapi/release-notes.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 16
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__body-multiple-params.md",
+          "fastapi/release-notes.md",
+          "fastapi/tutorial__static-files.md",
+          "fastapi/tutorial__query-params.md",
+          "fastapi/tutorial__background-tasks.md"
+        ],
+        "latency_ms": 567
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/tutorial__body.md",
+          "fastapi/tutorial__body-multiple-params.md",
+          "fastapi/tutorial__body.md",
+          "fastapi/tutorial__path-params.md",
+          "fastapi/tutorial__static-files.md"
+        ],
+        "latency_ms": 1321
+      }
+    }
+  },
+  "How do I use dependency injection in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__dependencies__index.md",
+      "fastapi/tutorial__dependencies__classes-as-dependencies.md",
+      "fastapi/tutorial__dependencies__sub-dependencies.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/features.md",
+          "fastapi/index.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__dependencies__index.md"
+        ],
+        "latency_ms": 588
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/features.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/alternatives.md",
+          "fastapi/alternatives.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/features.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__dependencies__index.md"
+        ],
+        "latency_ms": 557
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/features.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__dependencies__index.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__dependencies__index.md"
+        ],
+        "latency_ms": 1391
+      }
+    }
+  },
+  "How do I handle file uploads in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__request-files.md",
+      "fastapi/tutorial__request-forms-and-files.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/reference__uploadfile.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 587
+      },
+      "sparse": {
+        "top_docs": [],
+        "latency_ms": 51
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/reference__uploadfile.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 619
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/reference__uploadfile.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/tutorial__request-forms-and-files.md",
+          "fastapi/tutorial__request-files.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 23835
+      }
+    }
+  },
+  "How do I add middleware in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__middleware.md",
+      "fastapi/advanced__middleware.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/tutorial__middleware.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/reference__middleware.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/tutorial__middleware.md"
+        ],
+        "latency_ms": 670
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/tutorial__middleware.md",
+          "fastapi/tutorial__cors.md",
+          "fastapi/release-notes.md",
+          "fastapi/release-notes.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 13
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__middleware.md",
+          "fastapi/tutorial__middleware.md",
+          "fastapi/tutorial__cors.md",
+          "fastapi/release-notes.md",
+          "fastapi/advanced__middleware.md"
+        ],
+        "latency_ms": 598
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/tutorial__middleware.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/reference__middleware.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/tutorial__cors.md"
+        ],
+        "latency_ms": 1995
+      }
+    }
+  },
+  "How do I handle errors and exceptions in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__handling-errors.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/deployment__concepts.md",
+          "fastapi/reference__exceptions.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/tutorial__handling-errors.md"
+        ],
+        "latency_ms": 664
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/advanced__middleware.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/release-notes.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/advanced__middleware.md",
+          "fastapi/deployment__concepts.md",
+          "fastapi/reference__exceptions.md"
+        ],
+        "latency_ms": 554
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/release-notes.md",
+          "fastapi/deployment__concepts.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/tutorial__handling-errors.md",
+          "fastapi/advanced__middleware.md"
+        ],
+        "latency_ms": 1290
+      }
+    }
+  },
+  "How do I structure a large FastAPI application with multiple routers?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__bigger-applications.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md"
+        ],
+        "latency_ms": 1009
+      },
+      "sparse": {
+        "top_docs": [],
+        "latency_ms": 11
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md"
+        ],
+        "latency_ms": 523
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md",
+          "fastapi/tutorial__bigger-applications.md"
+        ],
+        "latency_ms": 1377
+      }
+    }
+  },
+  "How do I run background tasks in FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__background-tasks.md",
+      "fastapi/reference__background.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/reference__background.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md"
+        ],
+        "latency_ms": 716
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/advanced__advanced-dependencies.md",
+          "fastapi/release-notes.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/advanced__advanced-dependencies.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 20460
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/reference__background.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md",
+          "fastapi/tutorial__background-tasks.md"
+        ],
+        "latency_ms": 1238
+      }
+    }
+  },
+  "How do I add OAuth2 authentication to FastAPI?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__security__oauth2-jwt.md",
+      "fastapi/tutorial__security__simple-oauth2.md",
+      "fastapi/tutorial__security__index.md",
+      "fastapi/advanced__security__oauth2-scopes.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/reference__security__index.md",
+          "fastapi/tutorial__security__first-steps.md",
+          "fastapi/advanced__security__oauth2-scopes.md",
+          "fastapi/tutorial__security__first-steps.md",
+          "fastapi/tutorial__security__index.md"
+        ],
+        "latency_ms": 994
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/release-notes.md",
+          "fastapi/reference__security__index.md",
+          "fastapi/tutorial__security__first-steps.md",
+          "fastapi/advanced__security__oauth2-scopes.md",
+          "fastapi/tutorial__security__first-steps.md"
+        ],
+        "latency_ms": 557
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/advanced__security__oauth2-scopes.md",
+          "fastapi/reference__security__index.md",
+          "fastapi/advanced__security__oauth2-scopes.md",
+          "fastapi/tutorial__security__oauth2-jwt.md",
+          "fastapi/tutorial__security__first-steps.md"
+        ],
+        "latency_ms": 1232
+      }
+    }
+  },
+  "How do I write tests for a FastAPI application?": {
+    "expected_doc_ids": [
+      "fastapi/tutorial__testing.md",
+      "fastapi/advanced__async-tests.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "fastapi/tutorial__testing.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/deployment__versions.md",
+          "fastapi/advanced__async-tests.md",
+          "fastapi/tutorial__testing.md"
+        ],
+        "latency_ms": 882
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/advanced__async-tests.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/benchmarks.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/advanced__async-tests.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/deployment__versions.md"
+        ],
+        "latency_ms": 555
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/advanced__async-tests.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/reference__testclient.md",
+          "fastapi/tutorial__testing.md",
+          "fastapi/deployment__versions.md"
+        ],
+        "latency_ms": 1453
+      }
+    }
+  },
+  "What is a Pydantic BaseModel?": {
+    "expected_doc_ids": [
+      "pydantic/api__base_model.md",
+      "pydantic/concepts__models.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "pydantic/api__base_model.md",
+          "pydantic/internals__resolving_annotations.md",
+          "pydantic/examples__requests.md",
+          "pydantic/api__standard_library_types.md",
+          "pydantic/concepts__unions.md"
+        ],
+        "latency_ms": 1913
+      },
+      "sparse": {
+        "top_docs": [
+          "fastapi/tutorial__body.md",
+          "pydantic/concepts__validators.md",
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__validators.md",
+          "fastapi/release-notes.md"
+        ],
+        "latency_ms": 16
+      },
+      "hybrid": {
+        "top_docs": [
+          "fastapi/tutorial__body.md",
+          "pydantic/errors__usage_errors.md",
+          "pydantic/index.md",
+          "pydantic/concepts__models.md",
+          "pydantic/concepts__config.md"
+        ],
+        "latency_ms": 813
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "pydantic/api__base_model.md",
+          "pydantic/examples__requests.md",
+          "pydantic/concepts__models.md",
+          "pydantic/index.md",
+          "pydantic/concepts__models.md"
+        ],
+        "latency_ms": 1314
+      }
+    }
+  },
+  "How do I write a custom field validator in Pydantic?": {
+    "expected_doc_ids": [
+      "pydantic/concepts__validators.md",
+      "pydantic/api__functional_validators.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "pydantic/examples__custom_validators.md",
+          "pydantic/concepts__validators.md",
+          "pydantic/api__functional_validators.md",
+          "pydantic/why.md",
+          "pydantic/errors__validation_errors.md"
+        ],
+        "latency_ms": 782
+      },
+      "sparse": {
+        "top_docs": [],
+        "latency_ms": 10
+      },
+      "hybrid": {
+        "top_docs": [
+          "pydantic/examples__custom_validators.md",
+          "pydantic/concepts__validators.md",
+          "pydantic/api__functional_validators.md",
+          "pydantic/why.md",
+          "pydantic/errors__validation_errors.md"
+        ],
+        "latency_ms": 925
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "fastapi/tutorial__query-params-str-validations.md",
+          "pydantic/why.md",
+          "pydantic/concepts__validators.md",
+          "pydantic/concepts__validators.md",
+          "pydantic/concepts__validators.md"
+        ],
+        "latency_ms": 1381
+      }
+    }
+  },
+  "How do I serialize a Pydantic model to JSON?": {
+    "expected_doc_ids": [
+      "pydantic/concepts__serialization.md",
+      "pydantic/concepts__json.md",
+      "pydantic/concepts__json_schema.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__json.md",
+          "pydantic/concepts__serialization.md",
+          "pydantic/api__functional_serializers.md"
+        ],
+        "latency_ms": 646
+      },
+      "sparse": {
+        "top_docs": [
+          "pydantic/internals__architecture.md",
+          "fastapi/tutorial__server-sent-events.md",
+          "fastapi/advanced__custom-response.md",
+          "fastapi/advanced__response-directly.md",
+          "fastapi/how-to__general.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__serialization.md",
+          "fastapi/how-to__general.md",
+          "fastapi/advanced__json-base64-bytes.md"
+        ],
+        "latency_ms": 952
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "pydantic/why.md",
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__serialization.md",
+          "pydantic/concepts__json.md",
+          "fastapi/advanced__json-base64-bytes.md"
+        ],
+        "latency_ms": 1463
+      }
+    }
+  },
+  "What is Pydantic strict mode?": {
+    "expected_doc_ids": [
+      "pydantic/concepts__strict_mode.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "pydantic/api__pydantic_settings.md",
+          "pydantic/api__errors.md",
+          "pydantic/concepts__config.md",
+          "pydantic/concepts__strict_mode.md",
+          "pydantic/api__aliases.md"
+        ],
+        "latency_ms": 947
+      },
+      "sparse": {
+        "top_docs": [
+          "pydantic/concepts__strict_mode.md",
+          "pydantic/index.md",
+          "pydantic/why.md",
+          "pydantic/api__standard_library_types.md",
+          "pydantic/api__standard_library_types.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "pydantic/concepts__strict_mode.md",
+          "pydantic/why.md",
+          "pydantic/concepts__conversion_table.md",
+          "pydantic/concepts__strict_mode.md",
+          "pydantic/index.md"
+        ],
+        "latency_ms": 606
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "pydantic/concepts__strict_mode.md",
+          "pydantic/concepts__strict_mode.md",
+          "pydantic/concepts__fields.md",
+          "pydantic/concepts__models.md",
+          "pydantic/concepts__strict_mode.md"
+        ],
+        "latency_ms": 1561
+      }
+    }
+  },
+  "How do I use field aliases in Pydantic?": {
+    "expected_doc_ids": [
+      "pydantic/concepts__alias.md",
+      "pydantic/api__aliases.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__fields.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/api__aliases.md"
+        ],
+        "latency_ms": 969
+      },
+      "sparse": {
+        "top_docs": [
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__types.md",
+          "pydantic/concepts__validation_decorator.md",
+          "pydantic/concepts__fields.md",
+          "pydantic/examples__dynamic_models.md"
+        ],
+        "latency_ms": 11
+      },
+      "hybrid": {
+        "top_docs": [
+          "pydantic/concepts__fields.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/examples__orms.md"
+        ],
+        "latency_ms": 690
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__fields.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__alias.md",
+          "pydantic/concepts__alias.md"
+        ],
+        "latency_ms": 1327
+      }
+    }
+  },
+  "How do I fine-tune a model with LoRA?": {
+    "expected_doc_ids": [
+      "huggingface/peft.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/how_to_hack_models.md",
+          "huggingface/tasks__prompting.md",
+          "huggingface/peft.md",
+          "huggingface/how_to_hack_models.md"
+        ],
+        "latency_ms": 593
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/quantization__aqlm.md",
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/peft.md"
+        ],
+        "latency_ms": 14
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/peft.md",
+          "huggingface/community_integrations__unsloth.md",
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/how_to_hack_models.md"
+        ],
+        "latency_ms": 619
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/tasks__audio_text_to_text.md",
+          "huggingface/how_to_hack_models.md",
+          "huggingface/peft.md",
+          "huggingface/peft.md"
+        ],
+        "latency_ms": 1417
+      }
+    }
+  },
+  "How does quantization reduce model size in transformers?": {
+    "expected_doc_ids": [
+      "huggingface/quantization__concept_guide.md",
+      "huggingface/quantization__overview.md",
+      "huggingface/quantization__selecting.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/quantization__concept_guide.md",
+          "huggingface/main_classes__quantization.md",
+          "huggingface/serve-cli__serving_optims.md",
+          "huggingface/quantization__overview.md",
+          "huggingface/quantization__concept_guide.md"
+        ],
+        "latency_ms": 746
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/quantization__overview.md",
+          "huggingface/quantization__concept_guide.md",
+          "huggingface/model_doc__deepseek_vl_hybrid.md",
+          "huggingface/model_doc__deepseek_vl.md",
+          "huggingface/model_doc__byt5.md"
+        ],
+        "latency_ms": 10
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/quantization__concept_guide.md",
+          "huggingface/quantization__overview.md",
+          "huggingface/model_doc__byt5.md",
+          "huggingface/model_doc__deepseek_vl_hybrid.md",
+          "huggingface/conversations.md"
+        ],
+        "latency_ms": 562
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/quantization__concept_guide.md",
+          "huggingface/main_classes__quantization.md",
+          "huggingface/serve-cli__serving_optims.md",
+          "huggingface/model_doc__byt5.md",
+          "huggingface/quantization__overview.md"
+        ],
+        "latency_ms": 26105
+      }
+    }
+  },
+  "How do I use the HuggingFace Trainer class?": {
+    "expected_doc_ids": [
+      "huggingface/trainer.md",
+      "huggingface/trainer_callbacks.md",
+      "huggingface/trainer_customize.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/model_doc__bark.md",
+          "huggingface/model_doc__dbrx.md",
+          "huggingface/tasks__object_detection.md",
+          "huggingface/grad_checkpointing.md",
+          "huggingface/grad_accumulation.md"
+        ],
+        "latency_ms": 1600
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/community.md",
+          "huggingface/tasks__knowledge_distillation_for_image_classification.md"
+        ],
+        "latency_ms": 13
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/community.md",
+          "huggingface/model_doc__bark.md",
+          "huggingface/model_doc__dbrx.md",
+          "huggingface/tasks__knowledge_distillation_for_image_classification.md",
+          "huggingface/tasks__object_detection.md"
+        ],
+        "latency_ms": 709
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/training.md",
+          "huggingface/tasks__object_detection.md",
+          "huggingface/quicktour.md",
+          "huggingface/tasks__knowledge_distillation_for_image_classification.md",
+          "huggingface/community.md"
+        ],
+        "latency_ms": 1170
+      }
+    }
+  },
+  "How do I use 4-bit quantization with bitsandbytes for inference?": {
+    "expected_doc_ids": [
+      "huggingface/quantization__bitsandbytes.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/quantization__selecting.md",
+          "huggingface/quantization__selecting.md",
+          "huggingface/quantization__bitsandbytes.md",
+          "huggingface/main_classes__quantization.md",
+          "huggingface/quantization__bitsandbytes.md"
+        ],
+        "latency_ms": 647
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/quantization__selecting.md",
+          "huggingface/quantization__selecting.md",
+          "huggingface/quantization__bitsandbytes.md",
+          "huggingface/llm_tutorial.md",
+          "huggingface/llm_tutorial_optimization.md"
+        ],
+        "latency_ms": 10
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/quantization__selecting.md",
+          "huggingface/quantization__selecting.md",
+          "huggingface/quantization__bitsandbytes.md",
+          "huggingface/llm_tutorial_optimization.md",
+          "huggingface/main_classes__quantization.md"
+        ],
+        "latency_ms": 725
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/quantization__bitsandbytes.md",
+          "huggingface/quantization__concept_guide.md",
+          "huggingface/model_doc__chameleon.md",
+          "huggingface/quantization__selecting.md",
+          "huggingface/llm_tutorial.md"
+        ],
+        "latency_ms": 1357
+      }
+    }
+  },
+  "How do I tokenize text with a fast tokenizer?": {
+    "expected_doc_ids": [
+      "huggingface/fast_tokenizers.md",
+      "huggingface/tokenizer_summary.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/model_doc__clip.md",
+          "huggingface/model_doc__codegen.md",
+          "huggingface/model_doc__bert.md",
+          "huggingface/model_doc__convbert.md",
+          "huggingface/model_doc__code_llama.md"
+        ],
+        "latency_ms": 613
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/model_doc__aya_vision.md",
+          "huggingface/assisted_decoding.md",
+          "huggingface/model_doc__bloom.md",
+          "huggingface/model_doc__csm.md",
+          "huggingface/model_doc__canine.md"
+        ],
+        "latency_ms": 11
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/model_doc__aya_vision.md",
+          "huggingface/model_doc__clip.md",
+          "huggingface/model_doc__codegen.md",
+          "huggingface/assisted_decoding.md",
+          "huggingface/model_doc__bert.md"
+        ],
+        "latency_ms": 704
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/main_classes__tokenizer.md",
+          "huggingface/model_doc__clip.md",
+          "huggingface/model_doc__cpm.md",
+          "huggingface/model_doc__bert.md",
+          "huggingface/model_doc__albert.md"
+        ],
+        "latency_ms": 1235
+      }
+    }
+  },
+  "What is the BERT model architecture in transformers?": {
+    "expected_doc_ids": [
+      "huggingface/model_doc__bert.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/glossary.md",
+          "huggingface/index.md",
+          "huggingface/index.md",
+          "huggingface/community_integrations__vllm.md",
+          "huggingface/community_integrations__nemo_automodel_pretraining.md"
+        ],
+        "latency_ms": 873
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/model_doc__decision_transformer.md",
+          "huggingface/model_doc__bert-generation.md",
+          "huggingface/tasks__masked_language_modeling.md",
+          "huggingface/model_doc__bertweet.md",
+          "huggingface/how_to_hack_models.md"
+        ],
+        "latency_ms": 11
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/model_doc__decision_transformer.md",
+          "huggingface/model_doc__bertweet.md",
+          "huggingface/model_doc__bert-generation.md",
+          "huggingface/add_new_model.md",
+          "huggingface/how_to_hack_models.md"
+        ],
+        "latency_ms": 17757
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/model_doc__bert.md",
+          "huggingface/model_doc__bert-generation.md",
+          "huggingface/model_doc__bertweet.md",
+          "huggingface/index.md",
+          "huggingface/model_doc__decision_transformer.md"
+        ],
+        "latency_ms": 1962
+      }
+    }
+  },
+  "How do I generate text with a transformer model?": {
+    "expected_doc_ids": [
+      "huggingface/generation_strategies.md",
+      "huggingface/generation_features.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/llm_tutorial.md",
+          "huggingface/model_doc__dia.md",
+          "huggingface/generation_strategies.md",
+          "huggingface/index.md",
+          "huggingface/tasks__image_text_to_text.md"
+        ],
+        "latency_ms": 862
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/pipeline_tutorial.md",
+          "huggingface/tasks__language_modeling.md",
+          "huggingface/pipeline_tutorial.md",
+          "huggingface/model_doc__biogpt.md",
+          "huggingface/generation_features.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/tasks__language_modeling.md",
+          "huggingface/model_doc__apertus.md",
+          "huggingface/llm_tutorial.md",
+          "huggingface/model_doc__dia.md",
+          "huggingface/conversations.md"
+        ],
+        "latency_ms": 535
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/llm_tutorial.md",
+          "huggingface/tasks__language_modeling.md",
+          "huggingface/model_doc__apertus.md",
+          "huggingface/tasks__summarization.md",
+          "huggingface/conversations.md"
+        ],
+        "latency_ms": 1394
+      }
+    }
+  },
+  "How does the attention mechanism work in transformers?": {
+    "expected_doc_ids": [
+      "huggingface/attention_interface.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "huggingface/glossary.md",
+          "huggingface/model_doc__afmoe.md",
+          "huggingface/serve-cli__serving_optims.md",
+          "huggingface/optimization_overview.md",
+          "huggingface/model_doc__detr.md"
+        ],
+        "latency_ms": 553
+      },
+      "sparse": {
+        "top_docs": [
+          "huggingface/kv_cache.md"
+        ],
+        "latency_ms": 13
+      },
+      "hybrid": {
+        "top_docs": [
+          "huggingface/kv_cache.md",
+          "huggingface/glossary.md",
+          "huggingface/model_doc__afmoe.md",
+          "huggingface/serve-cli__serving_optims.md",
+          "huggingface/optimization_overview.md"
+        ],
+        "latency_ms": 720
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "huggingface/optimization_overview.md",
+          "huggingface/model_doc__afmoe.md",
+          "huggingface/serve-cli__serving_optims.md",
+          "huggingface/model_doc__deit.md",
+          "huggingface/kv_cache.md"
+        ],
+        "latency_ms": 1356
+      }
+    }
+  },
+  "How do I use Anthropic Claude with LangChain?": {
+    "expected_doc_ids": [
+      "langchain/libs__partners__anthropic__README.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "langchain/libs__partners__anthropic__README.md",
+          "langchain/libs__langchain_v1__README.md",
+          "langchain/libs__partners__anthropic__README.md",
+          "langchain/libs__partners__anthropic__README.md",
+          "langchain/README.md"
+        ],
+        "latency_ms": 542
+      },
+      "sparse": {
+        "top_docs": [
+          "langchain/AGENTS.md",
+          "langchain/CLAUDE.md",
+          "langgraph/libs__prebuilt__README.md"
+        ],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "langgraph/libs__prebuilt__README.md",
+          "langchain/AGENTS.md",
+          "langchain/libs__partners__anthropic__README.md",
+          "langchain/libs__langchain_v1__README.md",
+          "langchain/CLAUDE.md"
+        ],
+        "latency_ms": 1065
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "langchain/libs__partners__anthropic__README.md",
+          "langchain/libs__langchain_v1__README.md",
+          "langgraph/libs__prebuilt__README.md",
+          "langchain/AGENTS.md",
+          "langchain/CLAUDE.md"
+        ],
+        "latency_ms": 8281
+      }
+    }
+  },
+  "How do I integrate Groq with LangChain?": {
+    "expected_doc_ids": [
+      "langchain/libs__partners__groq__README.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__qdrant__README.md",
+          "langchain/libs__partners__ollama__README.md"
+        ],
+        "latency_ms": 10989
+      },
+      "sparse": {
+        "top_docs": [],
+        "latency_ms": 12
+      },
+      "hybrid": {
+        "top_docs": [
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__qdrant__README.md",
+          "langchain/libs__partners__ollama__README.md"
+        ],
+        "latency_ms": 561
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__groq__README.md",
+          "langchain/libs__partners__openrouter__README.md",
+          "langchain/libs__partners__xai__README.md"
+        ],
+        "latency_ms": 6431
+      }
+    }
+  },
+  "What is the LangChain text splitter library used for?": {
+    "expected_doc_ids": [
+      "langchain/libs__text-splitters__README.md"
+    ],
+    "modes": {
+      "dense": {
+        "top_docs": [
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__langchain_v1__README.md"
+        ],
+        "latency_ms": 853
+      },
+      "sparse": {
+        "top_docs": [],
+        "latency_ms": 11
+      },
+      "hybrid": {
+        "top_docs": [
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__langchain_v1__README.md"
+        ],
+        "latency_ms": 618
+      },
+      "hybrid_rerank": {
+        "top_docs": [
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__text-splitters__README.md",
+          "langchain/libs__standard-tests__README.md",
+          "langchain/libs__README.md"
+        ],
+        "latency_ms": 1562
+      }
+    }
+  }
+}
