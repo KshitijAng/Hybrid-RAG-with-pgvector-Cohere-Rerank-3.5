@@ -7,7 +7,7 @@ Built with hybrid retrieval (dense + sparse fused via **Reciprocal Rank Fusion (
 
 ## What it does
 
-This is a learning-focused implementation that combines semantic retrieval (dense) and keyword-based searc (sparse) to improve grounding over technical documentation, enabling natural-language question answering with inline chunk-level citations back to the original source content.
+This is a learning-focused implementation that combines semantic retrieval (dense) and keyword-based search (sparse) to improve grounding over technical documentation, enabling natural-language question answering with inline chunk-level citations back to the original source content.
 
 Four retrieval modes are exposed so you can see what each technique contributes to the final ranking.
 
@@ -22,6 +22,19 @@ Four retrieval modes are exposed so you can see what each technique contributes 
 | LangGraph | 16 | 120 |
 | Anthropic cookbook | 13 | 32 |
 | **Total** | **596** | **5,753** |
+
+
+## Demo
+
+**Cross-source query** — *"How do I validate cross-field constraints on a Pydantic model used as a FastAPI request body — for example, ensuring `end_date` is after `start_date`?"*
+
+The system retrieves from both the Pydantic and FastAPI corpora, generates a runnable answer, and cites the specific chunks that grounded each claim:
+
+![Streamlit UI showing a cross-source answer with inline citations and a resolved sources list](assets/streamlit-ui-sources.png)
+
+Every `/ask` request becomes one Langfuse trace tree — retrieval span, Cohere rerank, LLM generation — with token cost and latency captured per step:
+
+![Langfuse dashboard showing traces, model costs, and observations for the hybridrag project](assets/langfuse-overview.png)
 
 
 ## Architecture
@@ -146,7 +159,11 @@ The system combines dense vector search with sparse keyword search to improve re
 
 ### Cohere rerank-3.5 as the final filter
 
-A final reranking step using `Cohere rerank-v3.5` improves relevance by evaluating the query against candidate chunks directly. This helps prioritize the most contextually accurate documentation before generating the final response.
+RRF is just math on rankings — it doesn't actually *read* the chunks. So its failure mode is that a strong keyword hit in the *wrong* source can win.
+
+**Concrete example observed during testing:** for the query *"What is a Pydantic BaseModel?"*, FastAPI's body tutorial mentions "BaseModel" frequently and gets pulled in by sparse search. RRF rewards the keyword density, and the canonical Pydantic doc gets pushed down the fused list.
+
+`Cohere rerank-v3.5` is a **cross-encoder**: it reads the query *together with* each candidate's full text and produces a semantic relevance score. Used as a final pass over the top-20 hybrid candidates → top-5, it filters exactly this kind of cross-source noise.
 
 ### Citation grounding
 
@@ -171,3 +188,8 @@ All indexed docs come from public OSS documentation:
 - `langchain/` — LangChain monorepo READMEs (`langchain-ai/langchain`)
 - `langgraph/` — LangGraph monorepo READMEs (`langchain-ai/langgraph`)
 - `anthropic/` — Anthropic cookbook (`anthropics/anthropic-cookbook`)
+
+
+## License
+
+MIT — see [LICENSE](LICENSE) for the full text.
